@@ -7,7 +7,7 @@
 int main()
 {
     auto window = sf::RenderWindow(sf::VideoMode({1080, 720}), "Pretty Much Nothing");
-    window.setFramerateLimit(144);
+    window.setFramerateLimit(60);
 
     while (window.isOpen())
     {
