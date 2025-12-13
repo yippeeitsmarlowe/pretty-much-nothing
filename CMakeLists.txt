@@ -12,6 +12,22 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main src/main.cpp src/game.cpp src/game.h)
-target_compile_features(main PRIVATE cxx_std_17)
-target_link_libraries(main PRIVATE SFML::Graphics SFML::System SFML::Audio SFML::Window SFML::Network)
+set(SOURCE_PATH "${PROJECT_SOURCE_DIR}/src")
+set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include")
+
+set(SOURCE_FILES
+    ${SOURCE_PATH}/main.cpp
+    ${SOURCE_PATH}/Game.cpp
+    ${SOURCE_PATH}/Menu.cpp
+)
+
+set(HEADER_FILES
+    ${INCLUDE_PATH}/Game.h
+    ${INCLUDE_PATH}/Menu.h
+)
+
+
+add_executable(PrettyMuchNothing ${SOURCE_FILES} ${HEADER_FILES})
+
+target_compile_features(PrettyMuchNothing PRIVATE cxx_std_17)
+target_link_libraries(PrettyMuchNothing PRIVATE SFML::Graphics SFML::System SFML::Audio SFML::Window SFML::Network)

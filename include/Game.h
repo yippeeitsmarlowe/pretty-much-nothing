@@ -1,0 +1,26 @@
+#pragma once
+
+#include <iostream>
+
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
+
+class Game
+{
+private:
+    /* data */
+public:
+    Game(/* args */);
+    ~Game();
+};
+
+Game::Game(/* args */)
+{
+}
+
+Game::~Game()
+{
+}
